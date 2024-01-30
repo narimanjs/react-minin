@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import WayToTeach from './components/WayToTeach/WayToTeach';
+import { ways } from './data';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <main>
+        <section>
+          <h3>Наш подход к обучению: </h3>
+          <WayToTeach
+            title={ways[0].title}
+            description={ways[0].description}
+          />
+          <WayToTeach {...ways[1]} />
+          <WayToTeach {...ways[2]} />
+          <WayToTeach {...ways[3]} />
+        </section>
+      </main>
     </div>
   );
 }
