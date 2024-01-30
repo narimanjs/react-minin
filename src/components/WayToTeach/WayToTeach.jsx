@@ -1,3 +1,4 @@
+import './WayToTeach.module.css';
 export default function WayToTeach(props) {
   return (
     <li>
