@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import styles from './TabsSecion.module.css';
+import styles from './TabsSection.module.css';
 function TabsSection({ active, onChange }) {
   return (
     <section className={styles['tab']}>

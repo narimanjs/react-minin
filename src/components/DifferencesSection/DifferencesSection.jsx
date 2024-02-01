@@ -1,7 +1,7 @@
 import { useState } from 'react';
-
 import Button from '../Button/Button';
-import { differences } from '../../data';
+import { differences } from './../../data';
+
 const DifferencesSection = () => {
   const [contentType, setContentType] = useState();
 
