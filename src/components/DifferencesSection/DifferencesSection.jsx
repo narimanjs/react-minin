@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button/Button';
 import { differences } from './../../data';
-
+import styles from './DifferencesSection.module.css';
 const DifferencesSection = () => {
   const [contentType, setContentType] = useState();
 
@@ -32,7 +32,9 @@ const DifferencesSection = () => {
         </Button>
       </section>
       {!contentType && <p>Нажми на кнопку</p>}
-      {contentType && <p>{differences[contentType]}</p>}
+      {contentType && (
+        <p className={styles['ways']}>{differences[contentType]}</p>
+      )}
     </>
   );
 };
