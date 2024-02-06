@@ -6,9 +6,10 @@ import DifferencesSection from './components/DifferencesSection/DifferencesSecti
 import TabsSection from './components/TabsSection/TabsSection';
 import FeedSection from './components/FeedSection/FeedSection';
 import './App.css';
+import EffectSection from './components/EffectSection';
 
 function App() {
-  const [tab, setTab] = useState('feedback');
+  const [tab, setTab] = useState('effect');
   return (
     <div>
       <Header />
@@ -26,6 +27,7 @@ function App() {
             </>
           )}
           {tab === 'feedback' && <FeedSection />}
+          {tab === 'effect' && <EffectSection />}
         </main>
       </main>
     </div>

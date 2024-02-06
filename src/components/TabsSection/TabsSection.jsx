@@ -15,6 +15,12 @@ function TabsSection({ active, onChange }) {
       >
         Обратная связь
       </Button>
+      <Button
+        isActive={active === 'effect'}
+        onClikkk={() => onChange('effect')}
+      >
+        effect
+      </Button>
     </section>
   );
 }
