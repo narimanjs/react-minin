@@ -1,7 +1,15 @@
-import React from 'react';
+import styles from './Modal.module.css';
 
 function Modal({ children }) {
-  return <dialog open> {children}</dialog>;
+  return (
+    <dialog
+      open
+      className={styles['effect']}
+    >
+      {' '}
+      {children}
+    </dialog>
+  );
 }
 
 export default Modal;
