@@ -6,7 +6,7 @@ import DifferencesSection from './components/DifferencesSection/DifferencesSecti
 import TabsSection from './components/TabsSection/TabsSection';
 import FeedSection from './components/FeedSection/FeedSection';
 import './App.css';
-import EffectSection from './components/EffectSection';
+import EffectSection from './components/EffectSection/EffectSection';
 
 function App() {
   const [tab, setTab] = useState('effect');

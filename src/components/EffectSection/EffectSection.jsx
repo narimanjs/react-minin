@@ -1,12 +1,15 @@
 import React from 'react';
-import Button from './Button/Button';
-import Modal from './Modal/Modal';
+import Button from '../Button/Button';
+import Modal from '../Modal/Modal';
 
+import styles from './EffectSection.module.css';
+
+function openModal() {}
 function EffectSection() {
   return (
-    <section>
+    <section className={styles['section']}>
       <h3>Effects</h3>
-      <Button>Открыть информацию</Button>
+      <Button onClikkk={openModal}>Открыть информацию</Button>
       <Modal>
         <h3>Hello from Modal</h3>
         <p>
