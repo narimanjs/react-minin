@@ -1,14 +1,30 @@
-import styles from './Modal.module.css';
+import { createPortal } from 'react-dom';
+import { useEffect, useState } from 'react';
 
-function Modal({ children }) {
-  return (
+function Modal({ children, open }) {
+  const [modalRoot, setModalRoot] = useState(null);
+
+  useEffect(() => {
+    const modalRoot = document.createElement('div');
+    modalRoot.classList.add('modal-root');
+    document.body.appendChild(modalRoot);
+    setModalRoot(modalRoot);
+
+    return () => {
+      document.body.removeChild(modalRoot);
+    };
+  }, []);
+
+  if (!modalRoot) return null;
+
+  return createPortal(
     <dialog
-      open
-      className={styles['effect']}
+      open={open}
+      className='effect'
     >
-      {' '}
       {children}
-    </dialog>
+    </dialog>,
+    modalRoot
   );
 }
 
