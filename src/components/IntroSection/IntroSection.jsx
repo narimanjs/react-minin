@@ -1,5 +1,11 @@
 import styles from './IntroSection.module.css';
 function IntroSection() {
+  Promise.reject('a')
+    .catch(p => p + 'b')
+    .catch(p => p + 'c')
+    .then(p => p + 'd')
+    .finally(p => p + 'e')
+    .then(p => console.log(p));
   return (
     <section>
       <h1 className={styles['centered']}>Nariman University</h1>
