@@ -13,19 +13,11 @@ function Modal({ children, open }) {
     return () => {
       document.body.removeChild(modalRoot);
     };
-  }, []);
+  }, [open]);
 
   if (!modalRoot) return null;
 
-  return createPortal(
-    <dialog
-      open={open}
-      className='effect'
-    >
-      {children}
-    </dialog>,
-    modalRoot
-  );
+  return createPortal(<dialog open={open}>{children}</dialog>, modalRoot);
 }
 
 export default Modal;
